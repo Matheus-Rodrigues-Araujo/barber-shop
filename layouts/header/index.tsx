@@ -11,6 +11,7 @@ export const Header = () => {
 
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
+    document.body.style.overflowY = "none";
   };
 
   const handleClickOutside = (e: MouseEvent) => {
