@@ -20,7 +20,7 @@ export const Footer = () => {
           ))}
         </div>
 
-        <div className="flex flex-col text-center justify-center">
+        <div className="flex flex-col items-center justify-between">
           <SubSectionTitle>Contact</SubSectionTitle>
           {footerContactLinks.map((item) => (
             <p className="text-white text-md font-light" key={item.name}>
