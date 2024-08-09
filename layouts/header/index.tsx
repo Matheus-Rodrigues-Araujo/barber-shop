@@ -1,5 +1,5 @@
 "use client";
-import { navigationLinks } from "../../constants";
+import { navigationLinks } from "./constants";
 import { Sidebar } from "../sidebar";
 import { useEffect, useState } from "react";
 import { TfiAlignRight } from "react-icons/tfi";
@@ -27,12 +27,12 @@ export const Header = () => {
     return () => {
       bodyStyle.overflowY = "auto";
     };
-  });
+  }, [isSidebarOpen]);
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
-  });
+  }, []);
 
   return (
     <>
