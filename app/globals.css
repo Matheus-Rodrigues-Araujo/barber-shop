@@ -7,7 +7,7 @@ body {
 }
 
 .header div,
-.footer div {
+.footer-wrapper {
   max-width: 1600px;
   margin-inline: auto;
 }

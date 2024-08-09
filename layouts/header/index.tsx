@@ -18,6 +18,7 @@ export const Header = () => {
     if (!(e.target instanceof Element)) return;
     if (e.target.closest(".overlay")) {
       setIsSidebarOpen(false);
+      document.body.style.overflowY = "auto";
     }
   };
 
@@ -27,8 +28,8 @@ export const Header = () => {
   });
 
   return (
-    <header className="header  h-16 bg-gray-950">
-      <div className="relative" >
+    <header className="header  h-24 bg-gray-950">
+      <div className="relative">
         <div className="flex fixed top-4 w-full justify-between items-center px-10">
           <Brand />
           <nav className="hidden md:flex gap-3 ">
