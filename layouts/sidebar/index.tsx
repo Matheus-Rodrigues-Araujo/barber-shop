@@ -14,7 +14,7 @@ export const Sidebar = ({
       <div
         className={`sidebar flex flex-col ${
           !isSidebarOpen ? "-translate-x-full" : "translate-x-0"
-        } transition-transform duration-300 ease-in-out w-[220px] fixed top-0 left-0 items-center min-h-svh z-20 pt-2 bg-gray-950 md:hidden`}
+        } transition-transform duration-300 ease-in-out w-[220px] fixed top-0 left-0 items-center min-h-svh z-20 pt-2 bg-black md:hidden`}
       >
         <ul className="flex flex-col gap-3 mt-2">
           <Brand />

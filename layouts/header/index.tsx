@@ -11,16 +11,23 @@ export const Header = () => {
 
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    document.body.style.overflowY = "hidden";
   };
 
   const handleClickOutside = (e: MouseEvent) => {
     if (!(e.target instanceof Element)) return;
     if (e.target.closest(".overlay")) {
       setIsSidebarOpen(false);
-      document.body.style.overflowY = "auto";
     }
   };
+
+  useEffect(() => {
+    const bodyStyle = document.body.style;
+    isSidebarOpen ? (bodyStyle.overflowY = "hidden") : "auto";
+
+    return () => {
+      bodyStyle.overflowY = "auto";
+    };
+  });
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside);
@@ -28,9 +35,9 @@ export const Header = () => {
   });
 
   return (
-    <header className="header  h-24 bg-gray-950">
-      <div className="relative">
-        <div className="flex fixed top-4 w-full justify-between items-center px-10">
+    <>
+      <header className="header h-24 px-10 bg-black flex">
+        <div className="header-wrapper w-full flex justify-between items-center">
           <Brand />
           <nav className="hidden md:flex gap-3 ">
             {navigationLinks.map((link) => (
@@ -42,18 +49,17 @@ export const Header = () => {
             ))}
           </nav>
           <TfiAlignRight
-            className="cursor-pointer md:hidden"
-            color="yellow"
+            className="cursor-pointer transition duration-300 ease-in-out hover:fill-yellow-400 md:hidden"
+            color="white"
             size="1.8em"
             onClick={handleSidebar}
           />
         </div>
-
-        <Sidebar
-          navigationLinks={navigationLinks}
-          isSidebarOpen={isSidebarOpen}
-        />
-      </div>
-    </header>
+      </header>
+      <Sidebar
+        navigationLinks={navigationLinks}
+        isSidebarOpen={isSidebarOpen}
+      />
+    </>
   );
 };
