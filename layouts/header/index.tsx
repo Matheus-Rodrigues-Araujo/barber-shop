@@ -53,6 +53,7 @@ export const Header = () => {
             color="white"
             size="1.8em"
             onClick={handleSidebar}
+            data-testid="toggle-sidebar"
           />
         </div>
       </header>
