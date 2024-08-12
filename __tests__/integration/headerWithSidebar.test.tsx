@@ -3,9 +3,9 @@
  */
 
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Header } from "./index";
+import { Header } from "../../layouts/header";
 
-jest.mock("../sidebar/index", () => ({
+jest.mock("../../layouts/sidebar", () => ({
   Sidebar: ({ isSidebarOpen }: { isSidebarOpen: boolean }) => (
     <>
       <div

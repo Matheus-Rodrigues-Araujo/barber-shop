@@ -22,7 +22,7 @@ export const Header = () => {
 
   useEffect(() => {
     const bodyStyle = document.body.style;
-    isSidebarOpen ? (bodyStyle.overflowY = "hidden") : "auto";
+    isSidebarOpen ? bodyStyle.overflowY = "hidden" : "auto";
 
     return () => {
       bodyStyle.overflowY = "auto";
@@ -38,8 +38,8 @@ export const Header = () => {
     <>
       <header className="header h-24 px-10 bg-black flex">
         <div className="header-wrapper w-full flex justify-between items-center">
-          <Brand />
-          <nav className="hidden md:flex gap-3 ">
+          <Brand testId="header-brand" />
+          <nav data-testid="header-nav" className="hidden md:flex gap-3 ">
             {navigationLinks.map((link) => (
               <NavigationLink
                 key={link.name}

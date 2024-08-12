@@ -1,8 +1,8 @@
 import Link from "next/link";
 
-export const Brand = () => {
+export const Brand = ({testId}: {testId: string}) => {
   return (
-    <Link href="/" title="Logo" className="text-yellow-400 text-xl font-bold">
+    <Link data-testid={testId} href="/" title="Logo" className="text-yellow-400 text-xl font-bold">
       BarberXYZ
     </Link>
   );

@@ -11,7 +11,7 @@ export const Footer = () => {
     <footer className="footer fixed bottom-0 w-full bg-black">
       <div className="footer-wrapper grid gap-10 p-10 md:grid-cols-3">
         <div className="flex flex-col text-center justify-between md:text-justify">
-          <Brand />
+          <Brand testId="footer-brand"/>
           <p className="text-white text-sm font-light">
             Copyright © 2024 BarberXYZ
           </p>
