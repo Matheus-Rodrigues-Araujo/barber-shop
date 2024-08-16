@@ -30,6 +30,17 @@ export const Header = () => {
   }, [isSidebarOpen]);
 
   useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (isSidebarOpen && width >= 728) {
+        setIsSidebarOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [isSidebarOpen]);
+
+  useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
