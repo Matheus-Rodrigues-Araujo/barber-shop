@@ -2,37 +2,26 @@ import Link from "next/link";
 import { Brand } from "@/components/brand";
 import { SubSectionTitle } from "@/components/subsection-title";
 
-import { BiLogoInstagram, BiLogoWhatsapp } from "react-icons/bi";
-
 import { footerContactLinks } from "../footer/constants";
+import { socialLinks } from "@/constants/socials-links";
 
 export const Footer = () => {
   return (
     <footer className="footer w-full bg-black">
       <div className="footer-wrapper grid gap-10 p-10 md:grid-cols-3">
         <div className="flex flex-col text-center justify-between md:text-justify">
-          <Brand testId="footer-brand"/>
+          <Brand testId="footer-brand" />
           <p className="text-white text-sm font-light">
             Copyright © 2024 BarberXYZ
           </p>
           <p className="text-white text-sm font-light">All rights reserved</p>
 
           <div className="flex gap-3 justify-center md:justify-start">
-            <Link href="#" title="Instagram">
-              <BiLogoInstagram
-                className="cursor-pointer transition duration-300 ease-in-out hover:fill-yellow-400"
-                color="white"
-                size="1.8em"
-              />
-            </Link>
-
-            <Link href="#" title="Whatsapp">
-              <BiLogoWhatsapp
-                className="cursor-pointer transition duration-300 ease-in-out hover:fill-yellow-400"
-                color="white"
-                size="1.8em"
-              />
-            </Link>
+            {socialLinks.map((link) => (
+              <Link key={link.name} href={link.route} title={link.name}>
+                {link.icon}
+              </Link>
+            ))}
           </div>
         </div>
 
