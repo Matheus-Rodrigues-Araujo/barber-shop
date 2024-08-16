@@ -36,7 +36,7 @@ export const Sidebar = ({
         <div className="flex gap-3 mr-auto mb-20 ml-10">
           {socialLinks.map((link) => (
             <Link key={link.name} href={link.route} title={link.name}>
-              {link.name}
+              {link.icon}
             </Link>
           ))}
         </div>
