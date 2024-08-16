@@ -21,13 +21,6 @@ describe("Header", () => {
     expect(brand).toHaveTextContent("BarberXYZ");
   });
 
-  test("should render the toggle icon and navigation in the Header", () => {
-    render(<Header />);
-    const icon = screen.getByTestId("toggle-sidebar");
-    expect(icon).toBeInTheDocument();
-    expect(screen.getByRole("navigation")).toBeInTheDocument();
-  });
-
   test("should handle the Sidebar visibility and body overflow on sidebar toggle", () => {
     render(<Header />);
     const icon = screen.getByTestId("toggle-sidebar");
@@ -48,25 +41,7 @@ describe("Header", () => {
     render(<Header />);
     const nav = screen.getByTestId("header-nav");
     expect(nav).toBeInTheDocument();
-    const links = [
-      "Home",
-      "About",
-      "Services",
-      "Contact",
-      "Sign In",
-      "Sign Up",
-    ];
 
-    testNavigationLinks(
-      [
-        { name: "Home", route: "/" },
-        { name: "About", route: "/about" },
-        { name: "Services", route: "/services" },
-        { name: "Contact", route: "/contact" },
-        { name: "Sign In", route: "/sign-in" },
-        { name: "Sign Up", route: "/sign-up" },
-      ],
-      "header-nav"
-    );
+    testNavigationLinks(navigationLinks, "header-nav");
   });
 });

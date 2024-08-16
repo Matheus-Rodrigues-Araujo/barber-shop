@@ -8,7 +8,7 @@ import { footerContactLinks } from "../footer/constants";
 
 export const Footer = () => {
   return (
-    <footer className="footer fixed bottom-0 w-full bg-black">
+    <footer className="footer w-full bg-black">
       <div className="footer-wrapper grid gap-10 p-10 md:grid-cols-3">
         <div className="flex flex-col text-center justify-between md:text-justify">
           <Brand testId="footer-brand"/>
