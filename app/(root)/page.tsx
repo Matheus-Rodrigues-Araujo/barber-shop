@@ -19,7 +19,7 @@ const RootPage = () => {
           objectPosition="center"
           priority={true}
           alt="haircut image"
-          className="fixed top-0 left-0 w-full h-full"
+          className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
         />
         <div className="text-white font-bold z-10 mt-6 md:mt-0">
           <HeroHeading>Lorem ipsum dolor</HeroHeading>
