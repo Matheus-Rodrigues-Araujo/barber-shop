@@ -21,7 +21,7 @@ export const NavigationLink = ({
           : isHeaderYellow
           ? "text-black"
           : "text-white"
-      } px-2 py-1 text-xl font-bold transition duration-300 ease-in`}
+      } px-2 py-1 text-xl font-bold transition duration-200 ease-in`}
     >
       {name}
       {name !== "Sign Up" && <div className="bg-yellow-400"></div>}
