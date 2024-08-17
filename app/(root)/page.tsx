@@ -21,12 +21,12 @@ const RootPage = () => {
           alt="haircut image"
           className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
         />
-        <div className="hero-text text-white font-bold z-10 mt-6 md:mt-0">
+        <div className="hero-text text-white font-bold z-10 my-5 md:mt-0">
           <HeroHeading>Experience the Perfect Cut</HeroHeading>
           <SubHeading>Transform Your Look with Style and Precision</SubHeading>
           <ContentText>
             Book your appointment now and discover the unique experience our
-            barbershop has to offer. <br/>Our team is dedicated to bringing out the
+            barbershop has to offer. <br className="hidden md:block" />Our team is dedicated to bringing out the
             best in you.
           </ContentText>
           <Link
