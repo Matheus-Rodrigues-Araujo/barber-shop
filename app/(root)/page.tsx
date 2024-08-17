@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-
+import "./styles.css";
 import { ContentText } from "@/components/content-text";
 import { HeroHeading } from "@/components/hero-heading";
 import { SubHeading } from "@/components/sub-heading";
@@ -22,10 +22,12 @@ const RootPage = () => {
           className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
         />
         <div className="hero-text text-white font-bold z-10 mt-6 md:mt-0">
-          <HeroHeading>Lorem ipsum dolor</HeroHeading>
-          <SubHeading>Duis tempor nunc sed mollis facilisis</SubHeading>
+          <HeroHeading>Experience the Perfect Cut</HeroHeading>
+          <SubHeading>Transform Your Look with Style and Precision</SubHeading>
           <ContentText>
-            Aliquam porta mauris arcu, non viverra mauris venenatis nec.
+            Book your appointment now and discover the unique experience our
+            barbershop has to offer. <br/>Our team is dedicated to bringing out the
+            best in you.
           </ContentText>
           <Link
             className="bg-yellow-400 text-center flex justify-center items-center 
@@ -38,19 +40,19 @@ const RootPage = () => {
         </div>
       </section>
 
-      <section className="min-h-screen bg-black flex md:p-10">
-        <div className="flex items-center gap-3 flex-col p-10 md:p-0 md:flex-row">
-          <div className="relative h-[500px] w-[300px] lg:h-[700px] lg:w-[500px]">
+      <section className="about-section flex">
+        <div className="flex flex-col-reverse md:flex-row">
+          <div className="relative mx-auto h-[60vh] w-full md:h-[600px] md:w-[400px] lg:h-[900px] lg:w-[700px]">
             <Image
               src="/barber_and_customer.jpg"
               fill
               objectFit="cover"
-              className="rounded-md"
+              className="w-full h-full"
               alt="barber cutting the customer's hair"
             />
           </div>
 
-          <div className="bg-black flex-1 flex flex-col justify-center items-center gap-3 lg:p-10">
+          <div className="bg-white flex-1 flex flex-col justify-center items-center gap-3 p-10">
             <ContentHeading>About us</ContentHeading>
             <ContentText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
