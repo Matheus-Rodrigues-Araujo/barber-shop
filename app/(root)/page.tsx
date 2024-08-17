@@ -6,11 +6,12 @@ import Link from "next/link";
 import { ContentText } from "@/components/content-text";
 import { HeroHeading } from "@/components/hero-heading";
 import { SubHeading } from "@/components/sub-heading";
+import { ContentHeading } from "@/components/content-heading";
 
 const RootPage = () => {
   return (
-    <div className="bg-gray-900">
-      <div className="relative min-h-screen flex justify-start items-center">
+    <>
+      <div className="relative min-h-screen flex justify-start items-center px-10">
         <Image
           src="/haircut-img.jpg"
           fill
@@ -18,9 +19,9 @@ const RootPage = () => {
           objectPosition="center"
           priority={true}
           alt="haircut image"
-          className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
+          className="fixed top-0 left-0 w-full h-full"
         />
-        <div className="text-white font-bold z-10 px-10">
+        <div className="text-white font-bold z-10">
           <HeroHeading>Lorem ipsum dolor</HeroHeading>
           <SubHeading>Duis tempor nunc sed mollis facilisis</SubHeading>
           <ContentText>
@@ -36,7 +37,34 @@ const RootPage = () => {
           </Link>
         </div>
       </div>
-    </div>
+
+      <div className="min-h-screen flex items-center bg-yellow-400 p-2 md:p-10">
+        <div className="bg-black rounded-xl flex items-center gap-3 flex-col p-10 md:p-0 md:flex-row">
+          <div className="relative h-[500px] w-[300px] lg:h-[700px] lg:w-[500px]">
+            <Image
+              src="/barber_and_customer.jpg"
+              fill
+              objectFit="cover"
+              className="rounded-md"
+              alt="barber cutting the customer's hair"
+            />
+          </div>
+
+          <div className="bg-black flex-1 flex flex-col justify-center items-center gap-3 lg:p-10">
+            <ContentHeading>About us</ContentHeading>
+            <ContentText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              mattis vehicula ultrices. Nulla eros dolor, convallis eget
+              facilisis eu, faucibus eu purus. Phasellus ac faucibus lorem, ut
+              tempus nibh. In in lorem a justo pharetra aliquet at ac nibh. Duis
+              diam arcu, volutpat et viverra non, tempor non magna. Maecenas
+              tempor condimentum euismod. Curabitur imperdiet risus nunc, et
+              efficitur augue sollicitudin nec. Etiam consectetur
+            </ContentText>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 

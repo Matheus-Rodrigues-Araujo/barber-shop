@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Brand } from "@/components/brand";
-import { SubSectionTitle } from "@/components/content-heading";
+import { ContentHeading } from "@/components/content-heading";
 
 import { footerContactLinks } from "../footer/constants";
 import { socialLinks } from "@/constants/socials-links";
@@ -26,7 +26,7 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col text-center justify-">
-          <SubSectionTitle>Contact</SubSectionTitle>
+          <ContentHeading>Contact</ContentHeading>
           {footerContactLinks.map((item) => (
             <p className="text-white text-sm font-light" key={item.name}>
               {item.data}
