@@ -11,7 +11,7 @@ import { ContentHeading } from "@/components/content-heading";
 const RootPage = () => {
   return (
     <>
-      <div className="relative min-h-screen flex justify-start items-center px-10">
+      <div className="relative min-h-[60vh] md:min-h-screen flex justify-start items-center px-10">
         <Image
           src="/haircut-img.jpg"
           fill
@@ -38,7 +38,7 @@ const RootPage = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center bg-yellow-400 md:p-10">
+      <div className="min-h-screen flex bg-yellow-400 md:items-center md:p-10">
         <div className="bg-black flex items-center gap-3 flex-col p-10 md:p-0 md:flex-row md:rounded-xl">
           <div className="relative h-[500px] w-[300px] lg:h-[700px] lg:w-[500px]">
             <Image
