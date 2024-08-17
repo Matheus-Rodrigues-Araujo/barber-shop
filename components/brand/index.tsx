@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MdContentCut } from "react-icons/md";
 
 export const Brand = ({
   testId,
@@ -12,10 +13,15 @@ export const Brand = ({
       data-testid={testId}
       href="/"
       title="Logo"
-      className={`${
+      className={`flex items-center ${
         isHeaderYellow ? "text-black" : "text-yellow-400"
-      } transition duration-300 ease-in text-3xl font-bold md:text-4xl`}
+      } transition duration-200 ease-in text-3xl font-bold md:text-4xl`}
     >
+      <MdContentCut
+        size="2rem"
+        color={isHeaderYellow ? "black" : "#facc15"}
+        className="transition duration-200 ease-in"
+      />
       BarberXYZ
     </Link>
   );
