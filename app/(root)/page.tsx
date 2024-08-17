@@ -11,7 +11,7 @@ import { ContentHeading } from "@/components/content-heading";
 const RootPage = () => {
   return (
     <>
-      <div className="relative min-h-[60vh] md:min-h-screen flex justify-start items-center px-10">
+      <div className="relative min-h-[75vh] md:min-h-screen flex justify-start items-center px-10">
         <Image
           src="/haircut-img.jpg"
           fill
@@ -21,7 +21,7 @@ const RootPage = () => {
           alt="haircut image"
           className="fixed top-0 left-0 w-full h-full"
         />
-        <div className="text-white font-bold z-10">
+        <div className="text-white font-bold z-10 mt-6 md:mt-0">
           <HeroHeading>Lorem ipsum dolor</HeroHeading>
           <SubHeading>Duis tempor nunc sed mollis facilisis</SubHeading>
           <ContentText>
