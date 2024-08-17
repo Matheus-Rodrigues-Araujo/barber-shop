@@ -83,9 +83,10 @@ export const Header = () => {
             ))}
           </nav>
           <TfiAlignRight
-            className="cursor-pointer transition duration-300 ease-in-out hover:fill-yellow-400 md:hidden"
+            className="cursor-pointer transition duration-300 ease-in-out p-1 md:hidden"
             color={headerColor === "bg-yellow-400" ? "black" : "white"}
-            size="1.8em"
+            // color="white"
+            size="2.5em"
             onClick={handleSidebar}
             data-testid="toggle-sidebar"
           />
