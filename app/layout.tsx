@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Playfair_Display_SC } from "next/font/google";
+import { Playfair_Display_SC, Lato } from "next/font/google";
 import "./globals.css";
 
-const playfairSC = Playfair_Display_SC({ subsets: ["latin"], weight: "400" });
+const playfairSC = Playfair_Display_SC({
+  subsets: ["latin"],
+  weight: "900",
+  variable: "--font-playfair",
+});
+const lato = Lato({
+  subsets: ["latin"],
+  weight: "300",
+  variable: "--font-lato",
+});
 
 export const metadata: Metadata = {
   title: "Barber Shop",
@@ -17,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={playfairSC.className}>{children}</body>
+      <body className={`${playfairSC.className} ${lato.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

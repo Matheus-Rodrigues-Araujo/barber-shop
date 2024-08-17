@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Brand } from "@/components/brand";
-import { SubSectionTitle } from "@/components/subsection-title";
+import { SubSectionTitle } from "@/components/content-heading";
 
 import { footerContactLinks } from "../footer/constants";
 import { socialLinks } from "@/constants/socials-links";

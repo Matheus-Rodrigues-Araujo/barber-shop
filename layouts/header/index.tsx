@@ -47,7 +47,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="header h-24 px-10 bg-[rgba(0,0,0,88%)] flex fixed top- left-0 w-full z-20">
+      <header className="header h-24 px-10 bg-[rgba(0,0,0,92%)] flex fixed top- left-0 w-full z-20">
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand testId="header-brand" />
           <nav data-testid="header-nav" className="hidden md:flex gap-3 ">

@@ -21,7 +21,7 @@ export const Sidebar = ({
       >
         <ul className="flex flex-col gap-6 mt-5 flex-grow">
           <Brand testId="sidebar-brand" />
-          <div>
+          <div className="flex flex-col gap-5" >
             {navigationLinks.map((link: any) => (
               <li key={link.name} className="w-20">
                 <NavigationLink
@@ -33,7 +33,7 @@ export const Sidebar = ({
             ))}
           </div>
         </ul>
-        <div className="flex gap-3 mr-auto mb-20 ml-10">
+        <div className="flex gap-6 mr-auto mb-20 ml-10">
           {socialLinks.map((link) => (
             <Link key={link.name} href={link.route} title={link.name}>
               {link.icon}

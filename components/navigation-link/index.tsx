@@ -11,7 +11,7 @@ export const NavigationLink = ({
     <Link
       href={route}
       title={name}
-      className="nav-link text-white text-lg font-bold transition duration-300 p-1 ease-in-out "
+      className="nav-link text-white text-xl font-bold transition duration-300 ease-in-out "
     >
       {name}
       <div className="bg-yellow-400"></div>

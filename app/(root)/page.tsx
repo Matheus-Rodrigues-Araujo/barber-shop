@@ -1,7 +1,11 @@
 "use server";
 
-import { Overlay } from "@/components/overlay";
 import Image from "next/image";
+import Link from "next/link";
+
+import { ContentText } from "@/components/content-text";
+import { HeroHeading } from "@/components/hero-heading";
+import { SubHeading } from "@/components/sub-heading";
 
 const RootPage = () => {
   return (
@@ -14,18 +18,22 @@ const RootPage = () => {
           objectPosition="center"
           priority={true}
           alt="haircut image"
-          className="fixed top-0 left-0 w-full h-full"
+          className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
         />
         <div className="text-white font-bold z-10 px-10">
-          <h1 className="text-4xl text-yellow-400 md:text-6xl">
-            Lorem ipsum dolor
-          </h1>
-          <h2 className="text-3xl md:text-5xl">
-            Duis tempor nunc sed mollis facilisis
-          </h2>
-          <p className="text-xl font-light">
+          <HeroHeading>Lorem ipsum dolor</HeroHeading>
+          <SubHeading>Duis tempor nunc sed mollis facilisis</SubHeading>
+          <ContentText>
             Aliquam porta mauris arcu, non viverra mauris venenatis nec.
-          </p>
+          </ContentText>
+          <Link
+            className="bg-yellow-400 text-center flex justify-center items-center 
+            w-32 h-12 transiton duration-300 ease-in-out 
+            text-black font-bold text-3xl rounded-md mt-5"
+            href="/sign-up"
+          >
+            <span>Join us</span>
+          </Link>
         </div>
       </div>
     </div>
