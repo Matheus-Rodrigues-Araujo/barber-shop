@@ -4,16 +4,19 @@ import { ContentHeading } from "@/components/content-heading";
 
 import { footerContactLinks } from "../footer/constants";
 import { socialLinks } from "@/constants/socials-links";
+import { ContentText } from "@/components/content-text";
+
+import "./styles.css"
 
 export const Footer = () => {
   return (
     <footer className="footer w-full bg-black">
-      <div className="footer-wrapper grid gap-10 p-10 md:grid-cols-3">
-        <div className="flex flex-col text-center justify-between md:text-justify">
+      <div className="footer-wrapper grid gap-3 p-10 md:grid-cols-3">
+        <div className="flex flex-col text-center justify-between items-center md:items-start md:text-justify">
           <Brand testId="footer-brand" />
-          <p className="text-white text-sm font-light">
+          <ContentText>
             Copyright © 2024 BarberXYZ
-          </p>
+          </ContentText>
           <p className="text-white text-sm font-light">All rights reserved</p>
 
           <div className="flex gap-3 justify-center md:justify-start">
@@ -25,12 +28,12 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col text-center justify-">
+        <div className="flex flex-col text-center items-center">
           <ContentHeading>Contact</ContentHeading>
           {footerContactLinks.map((item) => (
-            <p className="text-white text-sm font-light" key={item.name}>
+            <ContentText key={item.name}>
               {item.data}
-            </p>
+            </ContentText>
           ))}
         </div>
 
