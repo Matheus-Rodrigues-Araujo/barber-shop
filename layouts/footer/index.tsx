@@ -6,7 +6,7 @@ import { footerContactLinks } from "../footer/constants";
 import { socialLinks } from "@/constants/socials-links";
 import { ContentText } from "@/components/content-text";
 
-import "./styles.css"
+import "./styles.css";
 
 export const Footer = () => {
   return (
@@ -14,9 +14,7 @@ export const Footer = () => {
       <div className="footer-wrapper grid gap-3 p-10 md:grid-cols-3">
         <div className="flex flex-col text-center justify-between items-center md:items-start md:text-justify">
           <Brand testId="footer-brand" />
-          <ContentText>
-            Copyright © 2024 BarberXYZ
-          </ContentText>
+          <ContentText>Copyright © 2024 BarberXYZ</ContentText>
           <p className="text-white text-sm font-light">All rights reserved</p>
 
           <div className="flex gap-3 justify-center md:justify-start">
@@ -31,9 +29,7 @@ export const Footer = () => {
         <div className="flex flex-col text-center items-center">
           <ContentHeading>Contact</ContentHeading>
           {footerContactLinks.map((item) => (
-            <ContentText key={item.name}>
-              {item.data}
-            </ContentText>
+            <ContentText key={item.name}>{item.data}</ContentText>
           ))}
         </div>
 
