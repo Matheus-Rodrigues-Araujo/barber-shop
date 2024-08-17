@@ -38,7 +38,7 @@ const RootPage = () => {
         </div>
       </div>
 
-      <div className="min-h-screen flex items-center bg-yellow-400 p-2 md:p-10">
+      <div className="min-h-screen flex items-center bg-yellow-400 md:p-10">
         <div className="bg-black rounded-xl flex items-center gap-3 flex-col p-10 md:p-0 md:flex-row">
           <div className="relative h-[500px] w-[300px] lg:h-[700px] lg:w-[500px]">
             <Image
