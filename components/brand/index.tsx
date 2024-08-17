@@ -1,12 +1,20 @@
 import Link from "next/link";
 
-export const Brand = ({ testId }: { testId: string }) => {
+export const Brand = ({
+  testId,
+  isHeaderYellow = false,
+}: {
+  testId: string;
+  isHeaderYellow?: boolean;
+}) => {
   return (
     <Link
       data-testid={testId}
       href="/"
       title="Logo"
-      className="text-yellow-400 text-3xl font-bold font-[font-playfair] md:text-4xl"
+      className={`${
+        isHeaderYellow ? "text-black" : "text-yellow-400"
+      } transition duration-300 ease-in text-3xl font-bold md:text-4xl`}
     >
       BarberXYZ
     </Link>

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Playfair_Display_SC, Lato } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
-const playfairSC = Playfair_Display_SC({
-  subsets: ["latin"],
-  weight: "900",
-  variable: "--font-playfair",
-});
+
 const lato = Lato({
   subsets: ["latin"],
   weight: "300",
@@ -26,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${playfairSC.className} ${lato.className}`}>
+      <body className={`${lato.className}`}>
         {children}
       </body>
     </html>

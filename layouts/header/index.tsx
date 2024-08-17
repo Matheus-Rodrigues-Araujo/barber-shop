@@ -8,6 +8,9 @@ import { NavigationLink } from "@/components/navigation-link";
 
 export const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [headerColor, setHeaderColor] = useState<
+    "bg-yellow-400" | "bg-transparent"
+  >("bg-transparent");
 
   const handleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -41,27 +44,47 @@ export const Header = () => {
   }, [isSidebarOpen]);
 
   useEffect(() => {
+    const handleHeaderColor = () => {
+      const heroSection = document.querySelector(".hero-text");
+      const rect = heroSection?.getBoundingClientRect();
+
+      rect && rect.top < 0
+        ? setHeaderColor("bg-yellow-400")
+        : setHeaderColor("bg-transparent");
+    };
+
+    document.addEventListener("scroll", handleHeaderColor);
+    return () => document.removeEventListener("scroll", handleHeaderColor);
+  }, []);
+
+  useEffect(() => {
     document.addEventListener("click", handleClickOutside);
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
   return (
     <>
-      <header className="header h-24 px-10 bg-[rgba(0,0,0,92%)] flex fixed top- left-0 w-full z-20">
+      <header
+        className={`header ${headerColor} h-24 px-10 flex fixed top- left-0 w-full z-20`}
+      >
         <div className="header-wrapper w-full flex justify-between items-center">
-          <Brand testId="header-brand" />
+          <Brand
+            testId="header-brand"
+            isHeaderYellow={headerColor === "bg-yellow-400"}
+          />
           <nav data-testid="header-nav" className="hidden md:flex gap-3 ">
             {navigationLinks.map((link) => (
               <NavigationLink
                 key={link.name}
                 route={link.route}
                 name={link.name}
+                isHeaderYellow={headerColor === "bg-yellow-400"}
               />
             ))}
           </nav>
           <TfiAlignRight
             className="cursor-pointer transition duration-300 ease-in-out hover:fill-yellow-400 md:hidden"
-            color="white"
+            color={headerColor === "bg-yellow-400" ? "black" : "white"}
             size="1.8em"
             onClick={handleSidebar}
             data-testid="toggle-sidebar"

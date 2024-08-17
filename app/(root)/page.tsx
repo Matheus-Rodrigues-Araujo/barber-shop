@@ -11,7 +11,7 @@ import { ContentHeading } from "@/components/content-heading";
 const RootPage = () => {
   return (
     <>
-      <div className="relative min-h-[75vh] md:min-h-screen flex justify-start items-center px-10">
+      <section className="relative min-h-[75vh] md:min-h-screen flex justify-start items-center px-10">
         <Image
           src="/haircut-img.jpg"
           fill
@@ -21,7 +21,7 @@ const RootPage = () => {
           alt="haircut image"
           className="fixed top-0 left-0 w-full h-full mix-blend-luminosity"
         />
-        <div className="text-white font-bold z-10 mt-6 md:mt-0">
+        <div className="hero-text text-white font-bold z-10 mt-6 md:mt-0">
           <HeroHeading>Lorem ipsum dolor</HeroHeading>
           <SubHeading>Duis tempor nunc sed mollis facilisis</SubHeading>
           <ContentText>
@@ -36,9 +36,9 @@ const RootPage = () => {
             <span>Join us</span>
           </Link>
         </div>
-      </div>
+      </section>
 
-      <div className="min-h-screen bg-black flex md:p-10">
+      <section className="min-h-screen bg-black flex md:p-10">
         <div className="flex items-center gap-3 flex-col p-10 md:p-0 md:flex-row">
           <div className="relative h-[500px] w-[300px] lg:h-[700px] lg:w-[500px]">
             <Image
@@ -63,7 +63,7 @@ const RootPage = () => {
             </ContentText>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };
