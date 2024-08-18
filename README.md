@@ -1,7 +1,8 @@
 # Barber Shop
 **Barber Shop** é uma aplicação desenvolvida com **React** e **Next.js**, projetada para facilitar o gerenciamento de barbearias. Oferece funcionalidades de agendamento de cortes de cabelo e um sistema de pagamento, com um design responsivo e otimizado para uma experiência de usuário impecável.
 
-<video controls src="preview/gif1.mp4" title="Title"></video>
+![<video controls src="preview/gif1.mp4" title="Title"></video>](preview/desktop.gif)
+![alt text](preview/mobile.gif)
 
 ## 📦 Funcionalidades
 
