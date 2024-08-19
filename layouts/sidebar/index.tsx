@@ -19,9 +19,9 @@ export const Sidebar = ({
           !isSidebarOpen ? "-translate-x-full" : "translate-x-0"
         } transition-transform duration-200 ease-in-out w-[220px] fixed top-0 left-0 items-center min-h-screen z-20 pt-2 bg-black md:hidden`}
       >
-        <ul className="flex flex-col gap-6 mt-5 flex-grow">
+        <div className="flex flex-col gap-6 mt-5 flex-grow">
           <Brand testId="sidebar-brand" />
-          <div className="flex flex-col gap-5">
+          <ul className="flex flex-col gap-5">
             {navigationLinks.map((link: any) => (
               <li key={link.name} className="w-24">
                 <NavigationLink
@@ -31,8 +31,8 @@ export const Sidebar = ({
                 />
               </li>
             ))}
-          </div>
-        </ul>
+          </ul>
+        </div>
         <div className="flex gap-6 mr-auto mb-20 ml-10">
           {socialLinks.map((link) => (
             <Link key={link.name} href={link.route} title={link.name}>
