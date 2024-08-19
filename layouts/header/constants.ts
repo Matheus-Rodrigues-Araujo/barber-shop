@@ -1,7 +1,7 @@
 export const navigationLinks = [
   {
     name: "Home",
-    route: "/",
+    route: "#home",
   },
   {
     name: "About",
@@ -9,7 +9,7 @@ export const navigationLinks = [
   },
   {
     name: "Services",
-    route: "/services",
+    route: "#services",
   },
   {
     name: "Contact",

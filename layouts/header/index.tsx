@@ -65,7 +65,11 @@ export const Header = () => {
   return (
     <>
       <header
-        className={`header ${headerColor} h-24 px-10 flex fixed top- left-0 w-full z-20`}
+        className={`header ${
+          headerColor === "bg-yellow-400"
+            ? `${headerColor} shadow-[0_-5px_10px_2px_black]`
+            : headerColor
+        } h-24 px-10 flex fixed top- left-0 w-full z-20`}
       >
         <div className="header-wrapper w-full flex justify-between items-center">
           <Brand

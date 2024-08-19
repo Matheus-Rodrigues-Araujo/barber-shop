@@ -2,16 +2,24 @@
 
 import Image from "next/image";
 import Link from "next/link";
+
 import "./styles.css";
+
 import { ContentText } from "@/components/content-text";
 import { HeroHeading } from "@/components/hero-heading";
 import { SubHeading } from "@/components/sub-heading";
 import { ContentHeading } from "@/components/content-heading";
+import { PriceCard } from "@/components/price-card";
+
+import { plans } from "../../constants/plans";
 
 const RootPage = () => {
   return (
     <>
-      <section className="relative min-h-[75vh] md:min-h-screen flex justify-start items-center px-10">
+      <section
+        className="relative min-h-[75vh] md:min-h-screen flex justify-start items-center p-10"
+        id="home"
+      >
         <Image
           src="/haircut-img.jpg"
           fill
@@ -26,8 +34,8 @@ const RootPage = () => {
           <SubHeading>Transform Your Look with Style and Precision</SubHeading>
           <ContentText>
             Book your appointment now and discover the unique experience our
-            barbershop has to offer. <br className="hidden md:block" />Our team is dedicated to bringing out the
-            best in you.
+            barbershop has to offer. <br className="hidden md:block" />
+            Our team is dedicated to bringing out the best in you.
           </ContentText>
           <Link
             className="bg-yellow-400 text-center flex justify-center items-center 
@@ -64,6 +72,30 @@ const RootPage = () => {
               efficitur augue sollicitudin nec. Etiam consectetur
             </ContentText>
           </div>
+        </div>
+      </section>
+      <section
+        className="services-section flex flex-col items-center justify-center bg-yellow-400 pt-10 pb-20"
+        id="services"
+      >
+        <div className="flex flex-col justify-center items-center gap-3 p-10">
+          <ContentHeading>Plans that match your needs</ContentHeading>
+          <ContentText>
+            Our pricing plans are designed to be affordable, flexibe, and
+            tailored to your unique needs.
+          </ContentText>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-8">
+          {plans.map(({ name, price, description, benefits }) => (
+            <PriceCard
+              key={name}
+              name={name}
+              price={price}
+              description={description}
+              benefits={benefits}
+            />
+          ))}
         </div>
       </section>
     </>

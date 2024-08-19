@@ -1,5 +1,17 @@
-.about-section p{
-    color: #625f5f;
-    font-weight: 600;
-    background-color: white;
+.about-section p {
+  color: #625f5f;
+  font-weight: 600;
+  background-color: white;
+}
+
+.services-section h3 {
+  color: #625f5f;
+  text-align: center;
+}
+
+.services-section p {
+  color: #625f5f;
+  font-weight: 600;
+  background-color: #facc15;
+  text-align: center;
 }
