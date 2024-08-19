@@ -10,7 +10,7 @@ export const PriceCard = ({ name, price, description, benefits }: Plan) => {
   return (
     <div
       className={`price-card ${
-        name === "Pro" ? "bg-black scale-110" : "bg-[#040404e4]"
+        name === "Pro" ? "bg-black md:scale-110" : "bg-[#040404e4]"
       } flex flex-col justify-center gap-3 w-full max-w-[350px] h-[450px] rounded-lg mx-auto px-3`}
     >
       <h4 className="text-left text-white text-2xl font-semibold">{name}</h4>
