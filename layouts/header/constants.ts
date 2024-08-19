@@ -5,7 +5,7 @@ export const navigationLinks = [
   },
   {
     name: "About",
-    route: "/about",
+    route: "#about",
   },
   {
     name: "Services",

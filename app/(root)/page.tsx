@@ -40,7 +40,7 @@ const RootPage = () => {
         </div>
       </section>
 
-      <section className="about-section flex">
+      <section className="about-section flex" id="about">
         <div className="flex flex-col-reverse md:flex-row">
           <div className="relative mx-auto h-[60vh] w-full md:h-[600px] md:w-[400px] lg:h-[900px] lg:w-[700px]">
             <Image
